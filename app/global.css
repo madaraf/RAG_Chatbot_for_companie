@@ -1,0 +1,132 @@
+* {
+  font-family: "Poppins", Verdana, Tahoma, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #6e86f1;
+}
+main {
+  width: 80vw;
+  height: 80vh;
+  background: linear-gradient(to bottom, #6e86f1, #a3b8f1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+section {
+  width: 100%;
+}
+section.populated {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: scroll; /* was: overflow: scroll */
+  overflow-x: hidden;
+}
+
+.starter-text {
+  padding: 0 80px;
+}
+form {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  border-top: #6e86f1 solid 2px;
+  padding-top: 20px;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+input.question-box {
+  width: 85%;
+  padding: 10px;
+  font-size: 15px;
+  color: #6e86f1;
+  border: none;
+}
+input[type="submit"] {
+  width: 15%;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  background-color: #6e86f1;
+}
+
+input:focus {
+  outline: none;
+}
+.bubble {
+  margin: 8px;
+  padding: 8px;
+  font-size: 15px;
+  border: none;
+  color: #6e86f1;
+  box-shadow: #959da533 0 8px 24px;
+  width: 80%;
+  text-align: left;
+}
+.bubble.user {
+  border-radius: 20px 20px 0 20px;
+  background-color: #e1f4ffff;
+  margin-left: auto;
+}
+.bubble.assistant {
+  border-radius: 20px 20px 20px 0;
+  background-color: #dce7ff;
+}
+.promt-suggestion-row {
+  width: 100%;
+}
+.promt-suggestion-button {
+  margin: 8px;
+  padding: 8px;
+  font-size: 15px;
+  border: none;
+  background-color: #dce7ff;
+  border-radius: 10px;
+  color: #6e86f1;
+  box-shadow: #959da533 0 8px 24px;
+}
+.loader {
+  margin: 10px;
+  width: 60px;
+  aspect-ratio: 4;
+  background:
+    no-repeat radial-gradient(circle closest-side, #fff 92%, #0000) 0 50%,
+    no-repeat radial-gradient(circle closest-side, #fff 92%, #0000) 50% 50%,
+    no-repeat radial-gradient(circle closest-side, #fff 92%, #0000) 100% 50%;
+  background-size: calc(100% / 3) 100%;
+  animation: loading 1s infinite linear;
+}
+@keyframes loading {
+  33% {
+    background-size:
+      calc(100% / 3) 0,
+      calc(100% / 3) 100%,
+      calc(100% / 3) 100%;
+  }
+  50% {
+    background-size:
+      calc(100% / 3) 100%,
+      calc(100% / 3) 0,
+      calc(100% / 3) 100%;
+  }
+  66% {
+    background-size:
+      calc(100% / 3) 100%,
+      calc(100% / 3) 100%,
+      calc(100% / 3) 0;
+  }
+}
